@@ -9,4 +9,10 @@ export class HomePage {
 
   constructor() {}
 
+  isAlertOpen = false;
+  public alertButtons = ['OK']
+
+  setOpen(isOpen: boolean) {
+    this.isAlertOpen = isOpen;
+  }
 }
