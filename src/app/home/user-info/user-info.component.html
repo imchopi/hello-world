@@ -1,0 +1,28 @@
+<ion-card [routerLink]="['/welcome']">
+
+    <ion-card-header>
+      <ion-avatar>
+          <img src="../../../assets/img/avatar.jpg" alt="Avatar">
+      </ion-avatar>      
+      <ion-card-title class="mainTitle">
+        {{ user?.nombre }}
+        {{ user?.apellido | slice:0:1 | uppercase }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-title>Nombre</ion-card-title>
+      <ion-card-content>
+        {{ user?.nombre }}
+      </ion-card-content>
+      <ion-card-title>Apellidos</ion-card-title>
+      <ion-card-content>
+        {{ user?.apellido }}
+      </ion-card-content>
+      <ion-card-title>Edad</ion-card-title>
+      <ion-card-content>
+        {{ user?.edad }}
+      </ion-card-content>
+    </ion-card-content>
+
+</ion-card>

@@ -1,0 +1,16 @@
+ion-card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+ion-card {
+    width: 350px;
+}
+
+.mainTitle {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+  }
