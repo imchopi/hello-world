@@ -6,7 +6,7 @@
       </ion-avatar>      
       <ion-card-title class="mainTitle">
         {{ user?.nombre }}
-        {{ user?.apellido | slice:0:1 | uppercase }}
+        {{ user?.apellido | firstChar }}
       </ion-card-title>
     </ion-card-header>
 

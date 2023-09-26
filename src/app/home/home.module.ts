@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { UserInfoComponent } from './user-info/user-info.component'
 import { HomePageRoutingModule } from './home-routing.module';
+import { FirstCharPipe } from '../pipes/first-char.pipe';
 
 @NgModule({
   imports: [
@@ -16,8 +17,9 @@ import { HomePageRoutingModule } from './home-routing.module';
   ],
   declarations: [
     HomePage,
-    UserInfoComponent
-    
+    UserInfoComponent,
+    FirstCharPipe
+
   ]
 })
 export class HomePageModule {}
