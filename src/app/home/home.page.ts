@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { User } from './user';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 
-export class HomePage {
+export class HomePage implements OnInit {
+
+  private _users:BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
+  
+  users$:Observable<User[]> = this._users.asObservable();
+
   users = [
     { nombre: 'Adrián', apellido: 'Perogil', edad: 27},
     { nombre: 'Daniel', apellido: 'Ávila', edad: 19},
@@ -16,5 +23,12 @@ export class HomePage {
   ]
 
   constructor() {
+  }
+  
+  ngOnInit(): void {
+    setTimeout(() => {
+      this._users.next(this.users); 
+    }, 1000);
+     
   }
 }
