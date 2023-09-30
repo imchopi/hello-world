@@ -8,9 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class UserInfoComponent implements OnInit {
   @Input() user?: {
-    nombre?: string,
-    apellido?: string,
-    edad?: number
+    name?: string,
+    surname?: string,
+    age?: number
   }
 
   constructor() { }

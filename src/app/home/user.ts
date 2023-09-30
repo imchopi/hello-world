@@ -1,5 +1,5 @@
 export interface User {
-    nombre?:string,
-    apellido?:string,
-    edad?:number
+    name?:string,
+    surname?:string,
+    age?:number
 }
