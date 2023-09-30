@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component'
 
 const routes: Routes = [
   {
@@ -14,8 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'welcome',
-    component: WelcomeComponent,
-  }
+    loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+  },
 ];
 
 @NgModule({

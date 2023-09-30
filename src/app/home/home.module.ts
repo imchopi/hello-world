@@ -18,7 +18,7 @@ import { FirstCharPipe } from '../pipes/first-char.pipe';
   declarations: [
     HomePage,
     UserInfoComponent,
-    FirstCharPipe
+    FirstCharPipe,
 
   ]
 })

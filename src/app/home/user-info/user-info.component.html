@@ -1,4 +1,4 @@
-<ion-card [routerLink]="['/welcome']">
+<ion-card>
 
     <ion-card-header>
       <ion-avatar>
@@ -8,9 +8,13 @@
         {{ user?.name }}
         {{ user?.surname | firstChar }}
       </ion-card-title>
+      <ion-button class="fav-button" fill="clear" aria-label="Favorite" (click)="onFavClick($event)">
+        <ion-icon *ngIf="user?.fav == true" slot="icon-only" color="danger" name="heart" aria-hidden="true"></ion-icon>
+        <ion-icon *ngIf="user?.fav == false" slot="icon-only" color="medium" name="heart-outline" aria-hidden="true"></ion-icon>
+      </ion-button>
     </ion-card-header>
 
-    <ion-card-content>
+    <ion-card-content [routerLink]="['/welcome']">
       <ion-card-title>Name</ion-card-title>
       <ion-card-content>
         {{ user?.name }}
