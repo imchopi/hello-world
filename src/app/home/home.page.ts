@@ -23,9 +23,9 @@ export class HomePage implements OnInit {
 	// In the component's ngOnInit method
 	ngOnInit(): void {
     let users: User[] = [
-      { id:1, name: 'Adrián', surname: 'Perogil', age: 26, fav: true},
+      { id:1, name: 'Adrián', surname: 'Perogil', age: 26, fav: false},
       { id:2, name: 'Daniel', surname: 'Ávila', age: 19, fav: true},
-      { id:3, name: 'Juanjo', surname: 'Atienza', age: 26, fav: false},
+      { id:3, name: 'Juanjo', surname: 'Atienza', age: 26, fav: true},
       { id:4, name: 'Chopito', surname: 'Chingón', age: 26, fav: true},
       { id:5, name: 'Daniel', surname: 'Luque', age: 20, fav: false},
     ]
